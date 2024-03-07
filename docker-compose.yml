@@ -5,7 +5,7 @@ services:
     container_name: nginx-proxy
     ports:
       - '3000:443'
-      - '80:80'
+      - '81:80'
     networks:
       - app-net
     volumes:
