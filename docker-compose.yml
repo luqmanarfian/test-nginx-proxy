@@ -10,7 +10,7 @@ services:
     volumes:
       - ./nginx/conf:/etc/nginx/conf.d
       - ./nginx/log:/var/log/nginx
-      - /home/admin/conf/web:/etc/letsencrypt
+      - /home/admin/conf/web:/etc/nginx/cert
     restart: always
 networks:
   app-net:
