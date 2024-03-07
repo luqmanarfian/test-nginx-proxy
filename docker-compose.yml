@@ -5,14 +5,13 @@ services:
     container_name: nginx-proxy
     ports:
       - '80:80'
-    networks:
-      - app-net
+    # networks:
+    #   - app-net
     volumes:
       - ./nginx/conf:/etc/nginx/conf.d
       - ./nginx/log:/var/log/nginx
-      - /home/admin/conf/web:/
+      - /home/admin/conf/web:/etc/letsencrypt
     restart: always
-
-networks:
-  app-net:
-    external: true
+# networks:
+#   app-net:
+#     external: true
