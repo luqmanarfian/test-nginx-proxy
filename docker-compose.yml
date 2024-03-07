@@ -8,7 +8,7 @@ services:
     networks:
       - app-net
     volumes:
-      - ./nginx/conf:/etc/nginx/conf.d
+      - ./nginx/conf/nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./nginx/log:/var/log/nginx
       - /home/admin/conf/web:/etc/nginx/cert
     restart: always
